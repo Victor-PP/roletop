@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<htmtl lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>roletop</title>
+        <link href="roletop.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>roletop</h1>
+            <section id="logo-area">
+                <img src="logo roletop.png"
+                title="logo roletop"
+                alt="logo do roletop">
+            </section>
+            
+                <nav>
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <!-- HTML para colocar os ícones do FA -->
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#banner">Galeria</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#informaçoes">Informação</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#orçamento">Orçamento</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#depoimento">Depoimento</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#divulgaçao">Divulgaçao</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#localizaçao">Localização</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="cadastro.html">Cadastre-se</a></li> 
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Login</a></li>
+                    </ul>            
+                </nav>
+            
+        </header>
+        <main>
+                <h2><a href="galeria.html">Galeria</a></h2>
+                <div class="banner">
+                    <img src="salao de festa 4.jpg"
+                    title="salao"
+                    alt="salao">
+                    <img src="salao de festa 02.jpg"
+                    title="salao"
+                    alt="salao">
+                </div>
+            <br />
+            <section id="informaçoes">
+                <h2><a href="informaçao.html">Informaçoes do local</a></h2>
+                <ul>
+                <li>Fazem qualquer tipo de festa</li>
+                <li>O espaço tem 150x40 metros</li>
+                <li>Oferecem apenas som e iluminaçao</li>
+                <li>Tem estacionamento</li>
+                <li>Ha um fumodromo</li>
+                <li>Ha cameras de segurança espalhadas em todo o local</li>
+                <li>Tem sistema de climatizaçao</li>
+            </section>
+            <br />
+            <section id="orçamento">
+                <h2>Orçamento</h2>
+                <p>Foto do orçamento</p>
+            </section>
+            <br />
+            <section id="depoimento">
+                <h2><a href="depoimento.html">Depoimento</a></h2>
+                <p>foto da festa</p>
+                <p>depoimento da locaçao</p>
+            </section>
+            <br />
+            <section id="divulgaçao">
+                <h2><a href="divugaçao.html">Divulgaçao</a></h2>
+                <p>foto da divulgaçao</p>
+                <p>divulgaçao escrita</p>
+            </section>
+            <br />
+            <section id="localizaçao">
+                <h2>Localizaçao e planta baixa</h2>
+                <img src="planta baixa .jpg"
+                title="planta baixa"
+                alt="planta baixa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14631.555546618638!2d-46.646147!3d-23.5364985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb23619858bc7e63e!2sEscola%20SENAI%20de%20Inform%C3%A1tica!5e0!3m2!1spt-BR!2sbr!4v1567604345672!5m2!1spt-BR!2sbr" 
+                ></iframe>
+            </section>
+        </main>
+        <br />
+        <footer>
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletop@email.com
+                <br />
+                11 1234 6789
+            </address>
+            <a href="#">Voltar para o topo!</a>
+        </footer>
+        <script>
+                function toggleMobileMenu() {
+                    var ul = document.querySelector("nav ul");
+                    var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                    var icon = document.querySelector(".icon > i");
+        
+                    ul.classList.toggle("mobile-mode");
+        
+                    if (icon.classList.contains("fa-bars")) {
+                        icon.classList.remove("fa-bars");
+                        icon.classList.remove("fa");
+        
+                        icon.classList.add("fas");
+                        icon.classList.add("fa-skull");
+                    } else {
+                        icon.classList.remove("fas");
+                        icon.classList.remove("fa-skull");
+        
+                        icon.classList.add("fa");
+                        icon.classList.add("fa-bars");
+                    }
+        
+                    for (var button of commonButtons) {
+                        button.classList.toggle("active");
+                    }
+        
+                }
+                
+            </script>
+    </body>
+</htmtl>

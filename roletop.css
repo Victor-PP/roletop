@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+h1{
+    display: none;
+}
+h2 {
+    color: #ffc600;
+    background-color: #7d0093;
+    text-align: center;
+}
+h2 > a{
+    text-decoration: none;
+    color: #ffc600;
+    background-color: #7d0093;
+}
+body{
+    background-color: #7d0093;
+}
+#logo-area{
+    background-image:url(salao\ de\ festa\ 2.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+}
+#logo-area > img {
+    width: 50%;
+}
+p {
+    color: #ffc600;
+    background-color: #7d0093;
+}
+nav > ul > li > a{
+    text-decoration: none;
+    color: #7d0093;
+
+}
+nav > ul{
+    display: flex;
+    justify-content: space-around;
+    color: #7d0093;
+    background-color: #ffc600;
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 1.5em;
+}
+
+.banner {
+    text-align: center;
+    justify-content:space-around;
+    display:flex;
+}
+.banner > img{
+    width:50%
+}
+main {
+    background-color: #7d0093;
+}
+section {
+    text-align: center;
+}
+
+#informaçoes > ul > li {
+    background-color: #7d0093;
+    color: #ffc600;
+}
+#localizaçao > img {
+    width: 20%;
+}
+footer {
+    background-color: #7d0093;
+    color: #ffc600;
+    text-align: center;
+    margin: 0%;
+}
+footer > a{
+    text-decoration: none;  
+    color: #ffc600;
+}
+
+nav #bt-mobile-menu {
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    nav #bt-mobile-menu {
+        display: block;
+    }
+
+    nav .bt-common-menu {
+        display: none;
+    }
+
+    nav .bt-common-menu.active {
+        display: block;
+    }
+
+    nav ul.mobile-mode {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+@media (max-width: 1000px) {
+    #localizaçao img{
+        width: 95%;
+    }    
+ }    

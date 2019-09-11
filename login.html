@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roletop</title>
+    <link href="roletop.css" rel="stylesheet">
+    <link href="roletop-secondary-pages.css" rel="stylesheet" type="text/css">
+    <link href="roletop-form-pages.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+</head>
+
+<body class="flex-container">
+    <header>
+        <nav>
+            <div class="section-container">
+                <ul>
+                    <li id="bt-mobile-menu">
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html" class="active">Principal</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#banner">fotos</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#informaçao">informaçao</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#orçamento">orçamento</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#depoimento">depoimento</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#divulgaçao">divulgaçao</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#localizaçao">localizaçao</a></li>
+                    <li class="bt-common-menu"><a onclick="togglemobilemenu()" href="cadastro.html">dashboard</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hgroup>
+            <h1>Roletop</h1>
+        </hgroup>
+    </header>
+
+    <main>
+        <h2>login</h2>
+        <form method="GET" action="dashboard.html">
+            <div>
+                <label for="email">E-mail</label>
+                <br />
+                <input id="email" type="email" />
+            </div>
+
+            <div>
+                <label for="senha">senha</label>
+                <br />
+                <input id="senha" type="password" />
+            </div>
+            
+            <input type="submit" value="entrar!" />
+        </form>
+    </main>        
+           
+    <footer>
+        <div class="section-container">
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletop@email.com
+                <br />
+                11 1234 6789
+            </address>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>

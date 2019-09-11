@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>informaçoes do local</title>
+        <link href="informaçao.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/349a64cb04.js"></script>
+    </head>
+    <body>
+        <header>
+                <h1>roletop</h1>
+                <section id="logo-area">
+                        <a href="roletop.html">
+                            <img src="logo roletop.png"
+                            title="logo roletop"
+                            alt="logo do roletop"
+                            href="roletop.html">
+                        </a>
+                </section>
+                <nav>
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <!-- HTML para colocar os ícones do FA -->
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html">Principal</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#informaçoes">Galeria</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#orçamento">Orçamento</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#depoimento">Depoimento</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#divulgaçao">Divulgaçao</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="roletop.html#localizaçao">Localização</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="cadastro.html">Cadastre-se</a></li> 
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <main>
+            <section>
+                <h2>informaçoes</h2>
+                <ul>
+                    <li>fazem qualquer tipo de festa</li>
+                    <li>o espaço tem 150x40 metros</li>
+                    <li>oferecem apenas som e iluminaçao</li>
+                    <li>tem estacionamento</li>
+                    <li>ha um fumodromo</li>
+                    <li>ha cameras de segurança espalhadas em todo o local</li>
+                    <li>tem sistema de climatizaçao</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletop@email.com
+                <br />
+                11 1234 6789
+            </address>
+            <a href="#">Voltar para o topo!</a>
+        </footer>
+        <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-skull");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-skull");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+                
+        </script>
+    </body>
+</html>

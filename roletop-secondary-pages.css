@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #7d0096;
+    text-align: center;
+    height: 100%;
+}
+body > header > nav{
+    background-color:#ffc600;    
+}
+ a{
+   text-decoration: none; 
+   list-style-type: none;
+   color: #7d0096;
+}
+
+
+main {
+    width: 40%;
+    align-self: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
